@@ -13,7 +13,7 @@ Installation
 Hello barnacles-logfile
 -----------------------
 
-The following code will log _simulated_ [raddec](https://github.com/reelyactive/raddec/) data to a file named eventlog.csv.  The simulated data is provided by [barnowl](https://github.com/reelyactive/barnowl/) which is typically run in conjunction with [barnacles](https://github.com/reelyactive/barnacles/).  Install the _barnowl_, _barnacles_ and _barnacles-logfile_ packages using npm before running the code.
+The following code will log _simulated_ [raddec](https://github.com/reelyactive/raddec/) data to a file named eventlog-YYMMDD-HHMMSS.csv where the date and time represent the local time the log was created.  The simulated data is provided by [barnowl](https://github.com/reelyactive/barnowl/) which is typically run in conjunction with [barnacles](https://github.com/reelyactive/barnacles/).  Install the _barnowl_, _barnacles_ and _barnacles-logfile_ packages using npm before running the code.
 
 ```javascript
 const Barnowl = require('barnowl');
@@ -32,11 +32,12 @@ Options
 
 __barnacles-logfile__ supports the following options:
 
-| Property         | Default    | Description                | 
-|:-----------------|:-----------|:---------------------------|
-| logfilePrefix    | "eventlog" | Prefix of the logfile name |
-| logfileExtension | ".csv"     | File extension to use      |
-| logfileDelimiter | ","        | Field delimiter            |
+| Property          | Default    | Description                      | 
+|:------------------|:-----------|:---------------------------------|
+| logfilePrefix     | "eventlog" | Prefix of the logfile name       |
+| logfileExtension  | ".csv"     | File extension to use            |
+| logfileDelimiter  | ","        | Field delimiter                  |
+| minutesToRotation | 60         | Period between logfile rotations |
 
 
 License
