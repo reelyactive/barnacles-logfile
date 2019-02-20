@@ -18,7 +18,9 @@
     "type": "git",
     "url": "https://github.com/reelyactive/barnacles-logfile.git"
   },
-  "dependencies": {},
+  "dependencies": {
+    "raddec": ">=0.2.3"
+  },
   "devDependencies": {},
   "bugs": {
     "url": "https://github.com/reelyactive/barnacles-logfile/issues"
