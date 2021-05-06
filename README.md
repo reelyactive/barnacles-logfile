@@ -32,12 +32,15 @@ Options
 
 __barnacles-logfile__ supports the following options:
 
-| Property          | Default    | Description                      | 
-|:------------------|:-----------|:---------------------------------|
-| logfilePrefix     | "eventlog" | Prefix of the logfile name       |
-| logfileExtension  | ".csv"     | File extension to use            |
-| logfileDelimiter  | ","        | Field delimiter                  |
-| minutesToRotation | 60         | Period between logfile rotations |
+| Property    | Default                    | Description                      | 
+|:------------|:---------------------------|:---------------------------------|
+| eventsToLog | { raddec: {}, dynamb: {} } | See default event-specific properties below |
+
+| Event-specific property | Default | Description                      | 
+|:------------------------|:--------|:---------------------------------|
+| logfileExtension        | ".csv"  | File extension to use            |
+| logfileDelimiter        | ","     | Field delimiter                  |
+| minutesToRotation       | 60      | Period between logfile rotations |
 
 
 License
