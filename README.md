@@ -42,6 +42,10 @@ __barnacles-logfile__ supports the following options:
 | logfileDelimiter        | ","     | Field delimiter                  |
 | minutesToRotation       | 60      | Period between logfile rotations |
 
+| dynamb-specific property | Default | Description                         | 
+|:-------------------------|:--------|:------------------------------------|
+| propertiesToLog          | [ all ] | dynamb properties to log in columns |
+
 
 License
 -------
