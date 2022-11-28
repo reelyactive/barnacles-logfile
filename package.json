@@ -19,7 +19,7 @@
     "url": "https://github.com/reelyactive/barnacles-logfile.git"
   },
   "dependencies": {
-    "raddec": "^0.2.8"
+    "raddec": "^0.4.3"
   },
   "devDependencies": {},
   "bugs": {

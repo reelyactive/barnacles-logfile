@@ -36,11 +36,12 @@ __barnacles-logfile__ supports the following options:
 |:------------|:---------------------------|:---------------------------------|
 | eventsToLog | { raddec: {}, dynamb: {} } | See default event-specific properties below |
 
-| Event-specific property | Default | Description                      | 
-|:------------------------|:--------|:---------------------------------|
-| logfileExtension        | ".csv"  | File extension to use            |
-| logfileDelimiter        | ","     | Field delimiter                  |
-| minutesToRotation       | 60      | Period between logfile rotations |
+| Event-specific property | Default | Description                           | 
+|:------------------------|:--------|:--------------------------------------|
+| folderPath              | "./"    | Path to folder where logfiles written |
+| logfileExtension        | ".csv"  | File extension to use                 |
+| logfileDelimiter        | ","     | Field delimiter                       |
+| minutesToRotation       | 60      | Period between logfile rotations      |
 
 | raddec-specific property | Default | Description                           | 
 |:-------------------------|:--------|:--------------------------------------|
