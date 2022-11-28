@@ -52,6 +52,20 @@ __barnacles-logfile__ supports the following options:
 | propertiesToLog          | [ all ] | dynamb properties to log in columns |
 
 
+Contributing
+------------
+
+Discover [how to contribute](CONTRIBUTING.md) to this open source project which upholds a standard [code of conduct](CODE_OF_CONDUCT.md).
+
+
+Security
+--------
+
+Consult our [security policy](SECURITY.md) for best practices using this open source software and to report vulnerabilities.
+
+[![Known Vulnerabilities](https://snyk.io/test/github/reelyactive/barnacles-logfile/badge.svg)](https://snyk.io/test/github/reelyactive/barnacles-logfile)
+
+
 License
 -------
 
