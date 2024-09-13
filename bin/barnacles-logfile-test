@@ -33,6 +33,8 @@ function generateDynamb() {
   let dynamb = {
     deviceId: "106f11e7e575",
     deviceIdType: 3,
+    batteryPercentage: 90 + Math.round((Math.random() * 10)),
+    isMotionDetected: [ (Math.random() > 0.8) ],
     temperature: (21 + (Math.random() * 10)).toPrecision(3),
     txCount: ++txCount,
     timestamp: Date.now()
