@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+const BarnaclesLogfile = require('../lib/barnacleslogfile.js');
+const Raddec = require('raddec');
+
+const UPDATE_PERIOD_MILLISECONDS = 5000;
+
+
+let barnaclesLogfile = new BarnaclesLogfile({});
+let txCount = 0;
+
+setInterval(generateRaddec, UPDATE_PERIOD_MILLISECONDS);
+setInterval(generateDynamb, UPDATE_PERIOD_MILLISECONDS);
+
+function generateRaddec() {
+  let raddec = new Raddec({
+    transmitterId: "106f11e7e575",
+    transmitterIdType: 3,
+    rssiSignature: [{
+      receiverId: "001bc50940810000",
+      receiverIdType: 1,
+      rssi: -80 + Math.round((Math.random() * 30))
+    }],
+    packets: [],
+    events: [ 3 ],
+    timestamp: Date.now()
+  });
+
+  barnaclesLogfile.handleEvent('raddec', raddec);
+}
+
+function generateDynamb() {
+  let dynamb = {
+    deviceId: "106f11e7e575",
+    deviceIdType: 3,
+    temperature: (21 + (Math.random() * 10)).toPrecision(3),
+    txCount: ++txCount,
+    timestamp: Date.now()
+  };
+
+  barnaclesLogfile.handleEvent('dynamb', dynamb);
+}
+
+console.log('barnacles-logfile instantiation test');

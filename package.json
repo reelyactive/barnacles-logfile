@@ -18,7 +18,8 @@
   },
   "main": "./lib/barnacleslogfile.js",
   "scripts": {
-    "start": "node bin/barnacles-logfile"
+    "start": "node bin/barnacles-logfile",
+    "test": "node bin/barnacles-logfile-test"
   },
   "repository": {
     "type": "git",
