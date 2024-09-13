@@ -13,7 +13,7 @@ __barnacles-logfile__ is a lightweight [Node.js package](https://www.npmjs.com/p
 Pareto Anywhere integration
 ---------------------------
 
-A common application of __barnacles-logfile__ is to write IoT data from [pareto-anywhere](https://github.com/reelyactive/pareto-anywhere) to a local logfiles.  Simply follow our [Create a Pareto Anywhere startup script](https://reelyactive.github.io/diy/pareto-anywhere-startup-script/) tutorial using the script below:
+A common application of __barnacles-logfile__ is to write IoT data from [pareto-anywhere](https://github.com/reelyactive/pareto-anywhere) to local logfiles.  Simply follow our [Create a Pareto Anywhere startup script](https://reelyactive.github.io/diy/pareto-anywhere-startup-script/) tutorial using the script below:
 
 ```javascript
 #!/usr/bin/env node
@@ -66,6 +66,27 @@ __barnacles-logfile__ supports the following options:
 | Property    | Default                    | Description                      | 
 |:------------|:---------------------------|:---------------------------------|
 | eventsToLog | { raddec: {}, dynamb: {} } | See default event-specific properties below |
+
+For example, the complete (default) options would be specified as:
+
+    {
+      eventsToLog: {
+        raddec: {
+          folderPath: "./",
+          logfileExtension: ".csv",
+          logfileDelimiter: ",",
+          minutesToRotation: 60,
+          numberOfReceiversToLog: 1
+        },
+        dynamb: {
+          folderPath: "./",
+          logfileExtension: ".csv",
+          logfileDelimiter: ",",
+          minutesToRotation: 60,
+          propertiesToLog: [ /* acceleration, ..., uptime */ ]
+        }
+      }
+    }
 
 | Event-specific property | Default | Description                           | 
 |:------------------------|:--------|:--------------------------------------|
