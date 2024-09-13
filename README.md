@@ -10,10 +10,34 @@ __barnacles-logfile__ ingests a real-time stream of _raddec_ and _dynamb_ object
 __barnacles-logfile__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnacles-logfile) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.
 
 
-Installation
-------------
+Pareto Anywhere integration
+---------------------------
 
-    npm install barnacles-logfile
+A common application of __barnacles-logfile__ is to write IoT data from [pareto-anywhere](https://github.com/reelyactive/pareto-anywhere) to a local logfiles.  Simply follow our [Create a Pareto Anywhere startup script](https://reelyactive.github.io/diy/pareto-anywhere-startup-script/) tutorial using the script below:
+
+```javascript
+#!/usr/bin/env node
+
+const ParetoAnywhere = require('../lib/paretoanywhere.js');
+
+// Edit the options to customise the logfiles
+const BARNACLES_LOGFILE_OPTIONS = {};
+
+// ----- Exit gracefully if the optional dependency is not found -----
+let BarnaclesLogfile;
+try {
+  BarnaclesLogfile = require('barnacles-logfile');
+}
+catch(err) {
+  console.log('This script requires barnacles-logfile.  Install with:');
+  console.log('\r\n    "npm install barnacles-logfile"\r\n');
+  return console.log('and then run this script again.');
+}
+// -------------------------------------------------------------------
+
+let pa = new ParetoAnywhere();
+pa.barnacles.addInterface(BarnaclesLogfile, BARNACLES_LOGFILE_OPTIONS);
+```
 
 
 Hello barnacles-logfile
@@ -32,6 +56,7 @@ barnowl.addListener(Barnowl, {}, Barnowl.TestListener, {});
 let barnacles = new Barnacles({ barnowl: barnowl });
 barnacles.addInterface(BarnaclesLogfile, { /* See options below */ });
 ```
+
 
 Options
 -------
