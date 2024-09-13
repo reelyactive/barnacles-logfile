@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+const BarnaclesLogfile = require('../lib/barnacleslogfile.js');
+
+
+let barnaclesLogfile = new BarnaclesLogfile({});
+
+
+console.log('barnacles-logfile instantiation test');
