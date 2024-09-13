@@ -1,7 +1,13 @@
 barnacles-logfile
 =================
 
-Logfile interface for [barnacles](https://github.com/reelyactive/barnacles/) open source software.  Writes events to log files.  We believe in an open Internet of Things.
+__barnacles-logfile__ writes IoT data to local logfiles in CSV (or equivalent) format for easy manipulation and analysis in spreadsheets.
+
+![Overview of barnacles-logfile](https://reelyactive.github.io/barnacles-logfile/images/overview.png)
+
+__barnacles-logfile__ ingests a real-time stream of _raddec_ and _dynamb_ objects from [barnacles](https://github.com/reelyactive/barnacles/) which it writes to a local logfile specific to each type.  It couples seamlessly with reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source IoT middleware.
+
+__barnacles-logfile__ is a lightweight [Node.js package](https://www.npmjs.com/package/barnacles-logfile) that can run on resource-constrained edge devices as well as on powerful cloud servers and anything in between.
 
 
 Installation
